@@ -1,0 +1,1 @@
+https://github.com/dassshh/zakrivayuschiy-teg-ad ридми файл
