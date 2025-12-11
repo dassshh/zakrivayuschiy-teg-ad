@@ -10,9 +10,9 @@
 @font-face {
   font-family: 'Inter';
   font-display: swap;
-  src:
-    local('Inter'),
-    url('Inter-Variable.woff2') format('woff2-variations'),
+  src: 
+    url('Inter-Variable.woff2') format('woff2 supports variations'),
     url('Inter-Variable.woff2') format('woff2');
   font-weight: 400 785;
+  font-stretch: 75% 100%;
 }
