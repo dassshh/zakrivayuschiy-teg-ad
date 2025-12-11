@@ -97,32 +97,33 @@
   filter: saturate(1.2);
 }
 .filter-2 {
-  filter: grayscale(0.5) contrast(0.9);
+  filter: grayscale(0.6) ;
 }
 .filter-3 {
-  filter: saturate(0.8);
+  filter: saturate(2.8);
 }
 .filter-4 {
-  filter: brightness(1.1);
+  filter: hue-rotate(45deg);
 }
 .filter-5 {
-  filter: grayscale(0.8);
+  filter: invert(0.7);
 }
 .filter-6 {
-  filter: sepia(80%);
+  filter: sepia(90%);
 }
 .filter-7 {
-  filter: blur(1.1);
+  filter: blur(1.1rem);
 }
 .filter-8 {
-  filter: saturate(0.8);
+  filter:hue-rotate(90deg) contrast(0.5);
 }
 .footer {
   margin: clamp(3rem, 10vw, 6.25rem) auto;
   background: white;
-  max-width: clamp(320px, 95vw, 700px);
+  width: clamp(306px, 95vw, 325px);
 }
 .button__text {
+  padding:37px;
   font-family: var(--font-accent);
   font-size: 14px;
   line-height: 90%;
