@@ -3,7 +3,8 @@
   font-display: swap;
   src:
     local('PressStart2P'),
-    url(PressStart2P-Regular.woff) format('woff');
+    url(PressStart2P-Regular.woff) format('woff'),
+    url(PressStart2P-Regular.woff2) format('woff2');
 }
 
 @font-face {
@@ -11,7 +12,8 @@
   font-display: swap;
   src:
     local('Inter'),
-    url(Inter-Variable.woff2) format('woff2');
+    url(Inter-Variable.woff2) format('woff2'),
+    url(Inter-Variable.woff2) format('woff2-variations');
     font-display: swap;
-    font-weight: 100 900;
+    font-weight: 400 785;
 }

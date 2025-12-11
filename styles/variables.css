@@ -25,5 +25,13 @@
       #1a1a1a 100%
     );
   --accent-color: #000;
-  --button-text-color: #fff;
+  --button-text-color: #000;
+  --button-bg: #ffffff;
+  --contour-color: #000000;
+  --animation-fill-color: #FF0000;
+  --hover-core-duration: 0.3s;
+  --hover-body-duration: 0.3s;
+  --click-contour-delay: 0.06s;
+  --click-scale-delay: 0.1s;
+  --click-sparks-delay: 0.3s;
 }

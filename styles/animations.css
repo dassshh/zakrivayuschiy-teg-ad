@@ -8,3 +8,154 @@
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
 */
+.card__like-button {
+  border: 3px solid #000000;
+  cursor: pointer;
+  background: var(--button-bg);
+  color: var(--button-text-color);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 2px 2px #000000;
+}
+.save-button {
+  display: flex;
+  align-items: center;
+  border: 3px solid #000000;
+  background: var(--button-bg);
+  color: var(--button-text-color);
+  transition: box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.save-button:focus-visible {
+  box-shadow: 2px 2px 2px 2px #000000;
+}
+.modal__close {
+  padding: 12px 132px;
+  border: 3px solid #000000;
+  font-family: var(--font-accent);
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 90%;
+  transition: box-shadow 0.3s ease;
+  background: var(--button-bg);
+  color: var(--button-text-color);
+  position: relative;
+  overflow: hidden;
+}
+.modal__close:focus-visible {
+  box-shadow: 2px 2px 2px 2px #000000;
+}
+.card__like-button::before,
+.save-button::before,
+.modal__close::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--accent-color);
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in-out;
+  z-index: 1;
+}
+.card__like-button:hover::before,
+.save-button:hover::before,
+.modal__close:hover::before {
+  transform: translateX(0);
+}
+.card__like-button:focus-visible,
+.save-button:focus-visible,
+.modal__close:focus-visible {
+  outline: none;
+  box-shadow: 2px 2px 0 0 var(--accent-color);
+}
+.card__icon-button:focus-visible {
+  outline: none;
+  border-color: var(--accent-color);
+}
+.like-icon:hover .core {
+  fill: var(--contour-color);
+  transition: fill 0.3s ease;
+}
+.like-icon:hover .main-body {
+  fill: var(--contour-color);
+  transition:
+    fill 0.3s ease
+    0.05s;
+}
+.like-icon .core {
+  fill: none;
+  transition:
+    fill 0.3s ease
+    0.03s;
+}
+.like-icon .main-body {
+  fill: none;
+  transition: fill 0.3s ease;
+}
+.like-icon:active .core,
+.like-icon:active .main-body {
+  fill: var(--animation-fill-color);
+  transition:
+    fill 0.3s ease,
+    fill 0.3s ease 0.05s;
+}
+.like-icon.is-liked .core {
+  fill: var(--animation-fill-color);
+  transition: fill 0.3s ease;
+}
+
+.like-icon.is-liked .main-body {
+  fill: var(--animation-fill-color);
+  transition:
+    fill 0.3s ease
+    0.06s;
+}
+
+.like-icon.is-liked .contour {
+  fill: var(--animation-fill-color);
+  transition:
+    fill 0.3s ease
+    0.12s;
+}
+@keyframes Heart {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.25); }
+}
+
+.like-icon.is-liked .heart {
+  animation:
+    Heart 0.3s ease-in
+    0.1s 
+    1;
+  transform-origin: center;
+}
+.like-icon .sparks {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.like-icon.is-liked .sparks {
+  opacity: 1;
+  animation:
+    fadeSparks 0.3s ease-in
+    0.3s
+    1;
+}
+@keyframes fadeSparks {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.like-icon:not(.is-liked) .core,
+.like-icon:not(.is-liked) .main-body {
+  fill: none;
+}
+.like-icon:not(.is-liked) .contour {
+  fill: var(--contour-color);
+  transition: fill 0.1s linear;
+}
