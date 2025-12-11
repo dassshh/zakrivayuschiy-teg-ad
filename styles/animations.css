@@ -1,12 +1,10 @@
 /* Опишите в этом файле все keyframes для проекта и стили анимаций иконки Like.
-
 Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
-
 */
 .card__like-button {
   border: 3px solid #000000;
@@ -52,7 +50,7 @@
 .card__like-button::before,
 .save-button::before,
 .modal__close::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -84,15 +82,11 @@
 }
 .like-icon:hover .main-body {
   fill: var(--contour-color);
-  transition:
-    fill 0.3s ease
-    0.05s;
+  transition: fill 0.3s ease 0.05s;
 }
 .like-icon .core {
   fill: none;
-  transition:
-    fill 0.3s ease
-    0.03s;
+  transition: fill 0.3s ease 0.03s;
 }
 .like-icon .main-body {
   fill: none;
@@ -101,9 +95,7 @@
 .like-icon:active .core,
 .like-icon:active .main-body {
   fill: var(--animation-fill-color);
-  transition:
-    fill 0.3s ease,
-    fill 0.3s ease 0.05s;
+  transition: fill 0.3s ease, fill 0.3s ease 0.05s;
 }
 .like-icon.is-liked .core {
   fill: var(--animation-fill-color);
@@ -112,27 +104,24 @@
 
 .like-icon.is-liked .main-body {
   fill: var(--animation-fill-color);
-  transition:
-    fill 0.3s ease
-    0.06s;
+  transition: fill 0.3s ease 0.06s;
 }
 
 .like-icon.is-liked .contour {
   fill: var(--animation-fill-color);
-  transition:
-    fill 0.3s ease
-    0.12s;
+  transition: fill 0.3s ease 0.12s;
 }
 @keyframes Heart {
-  0% { transform: scale(1); }
-  100% { transform: scale(1.25); }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
 }
 
 .like-icon.is-liked .heart {
-  animation:
-    Heart 0.3s ease-in
-    0.1s 
-    1;
+  animation: Heart 0.3s ease-in 0.1s 1;
   transform-origin: center;
 }
 .like-icon .sparks {
@@ -142,14 +131,15 @@
 
 .like-icon.is-liked .sparks {
   opacity: 1;
-  animation:
-    fadeSparks 0.3s ease-in
-    0.3s
-    1;
+  animation: fadeSparks 0.3s ease-in 0.3s 1;
 }
 @keyframes fadeSparks {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .like-icon:not(.is-liked) .core,
 .like-icon:not(.is-liked) .main-body {

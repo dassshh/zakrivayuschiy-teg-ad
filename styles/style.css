@@ -1,15 +1,3 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-*/
-
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -20,11 +8,12 @@
   background-repeat: repeat;
   background-position: top left;
   min-height: 100vh;
-  width: 1440px;
+  max-width: clamp(320px, 95vw, 700px);
+  margin: 0 auto;
 }
 .header {
-  margin: 100px 370px 0 370px;
-  padding: 128px 60px 128px 60px;
+  margin-top: clamp(2rem, 8vw, 6rem);
+  padding: clamp(3rem, 8vw, 8rem) clamp(1.5rem, 4vw, 3.75rem);
   background: white;
   border: 2px solid #000000;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -32,26 +21,22 @@
 }
 .html-text {
   font-family: var(--font-accent);
-  font-size: 65px;
+  font-size: clamp(2.5rem, 8vw, 4.0625rem);
   line-height: 1;
   margin: 0 0 8px;
 }
 .header-p {
   font-family: var(--font-accent);
-  font-size: 23px;
-}
-.main {
-  margin-left: 370px;
-  margin-right: 370px;
+  font-size: clamp(1rem, 3.5vw, 1.4375rem);
 }
 .card {
   background: white;
   border: 3px solid #000000;
-  margin-top: 100px;
+  margin-top: clamp(2rem, 8vw, 6.25rem);
 }
 .card-title {
   font-family: var(--font-main);
-  font-size: 18px;
+  font-size: clamp(1.125rem, 3vw, 1.125rem);
   padding: 3px 24px 3px 10px;
 }
 .card-image-lable {
@@ -59,19 +44,18 @@
 }
 .label {
   position: absolute;
-  top: 25px;
-  right: 25px;
+  top: clamp(0.75rem, 3vw, 1.5625rem);
+  right: clamp(0.75rem, 3vw, 1.5625rem);
   background: rgb(255, 255, 255, 0.6);
   color: rgba(0, 0, 0, 0.6);
   font-family: var(--font-accent);
-  font-size: 14px;
+  font-size: clamp(0.875rem, 2.5vw, 0.875rem);
   z-index: 1;
   mix-blend-mode: hard-light;
-  text-shadow:
-    -1px -1px 0 var(--label-text-stroke-color),
-     1px -1px 0 var(--label-text-stroke-color),
-    -1px  1px 0 var(--label-text-stroke-color),
-     1px  1px 0 var(--label-text-stroke-color);
+  text-shadow: -1px -1px 0 var(--label-text-stroke-color),
+    1px -1px 0 var(--label-text-stroke-color),
+    -1px 1px 0 var(--label-text-stroke-color),
+    1px 1px 0 var(--label-text-stroke-color);
 }
 @supports ((-webkit-text-stroke: 1px black) or (text-stroke: 1px black)) {
   .label {
@@ -82,17 +66,17 @@
 }
 .card-content {
   font-family: var(--font-main);
-  padding: 27px 25px 25px 25px;
+  padding: clamp(1rem, 4vw, 1.7rem);
 }
 .text-p2 {
-  margin-top: 27px;
+  margin-top: clamp(1rem, 4vw, 1.7rem);
 }
 .card-display {
   display: flex;
   justify-content: flex-end;
-  gap: 5px;
-  margin-right: 25px;
-  margin-bottom: 25px;
+  gap: clamp(0.3rem, 1.5vw, 0.3125rem);
+  margin-right: clamp(0.75rem, 3vw, 1.5625rem);
+  margin-bottom: clamp(0.75rem, 3vw, 1.5625rem);
 }
 .card__icon-button {
   display: flex;
@@ -104,13 +88,13 @@
   transition: border-color 0.3s ease;
 }
 .like-icon {
-  width: 39px;
-  height: 39px;
-  fill: #ccc;
+  width: clamp(24px, 8vw, 39px);
+  height: clamp(24px, 8vw, 39px);
+  fill: #ffffff;
   transition: fill 0.3s ease, transform 0.3s ease;
 }
 .filter-1 {
-  filter: saturate(1.2)
+  filter: saturate(1.2);
 }
 .filter-2 {
   filter: grayscale(0.5) contrast(0.9);
@@ -134,8 +118,9 @@
   filter: saturate(0.8);
 }
 .footer {
-  margin: 50px 553px 103px 552px;
+  margin: clamp(3rem, 10vw, 6.25rem) auto;
   background: white;
+  max-width: clamp(320px, 95vw, 700px);
 }
 .button__text {
   font-family: var(--font-accent);
@@ -167,9 +152,8 @@
 }
 .modal {
   border: none;
-  padding: 24px;
-  max-width: 400px;
-  width: 357px;
+  padding: clamp(1.5rem, 6vw, 1.5rem);
+  max-width: clamp(300px, 90vw, 400px);
   background: white;
 }
 .modal::backdrop {
@@ -192,10 +176,8 @@
 }
 .modal__title {
   font-family: var(--font-accent);
-  font-size: 14px;
-  width: 234px;
+  font-size: clamp(0.875rem, 2.5vw, 0.875rem);
+  width: auto;
   line-height: 150%;
   font-weight: var(--font-weight-text);
-}
-@media (width <= 375px) {
 }
